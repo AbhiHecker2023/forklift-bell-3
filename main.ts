@@ -30,3 +30,20 @@ basic.forever(function () {
         radio.sendNumber(0)
     }
 })
+basic.forever(function () {
+    if (action == 1) {
+        Forward()
+    }
+    if (action == 2) {
+        Backward()
+    }
+    if (action == 6) {
+        forkUp()
+    }
+    if (action == 7) {
+        forkDown()
+    }
+    if (action == 0) {
+        wuKong.stopAllMotor()
+    }
+})
