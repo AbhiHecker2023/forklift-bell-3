@@ -17,3 +17,12 @@ let action = 0
 joystickbit.initJoystickBit()
 radio.setGroup(5)
 basic.showIcon(IconNames.Skull)
+basic.forever(function () {
+    if (joystickbit.getRockerValue(joystickbit.rockerType.Y) > 800) {
+        radio.sendNumber(1)
+    } else if (joystickbit.getRockerValue(joystickbit.rockerType.Y) < 200) {
+        radio.sendNumber(2)
+    } else {
+    	
+    }
+})
